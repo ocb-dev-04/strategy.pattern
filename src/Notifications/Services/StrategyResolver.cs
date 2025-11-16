@@ -13,7 +13,7 @@ public sealed class StrategyResolver
     {
         INotificationStrategy? found = _notificationStrategies.FirstOrDefault(f => f.SupportedType.Equals(notificationType));
         if (found is null)
-            throw new ApplicationException("Unsupported notification type");
+            throw new NullReferenceException("Unsupported notification type");
 
         return found;
     }

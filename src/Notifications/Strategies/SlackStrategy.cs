@@ -5,7 +5,7 @@ namespace Notifications.Strategies;
 
 public sealed class SlackStrategy : INotificationStrategy
 {
-    public NotificationType SupportedType => NotificationType.Push;
+    public NotificationType SupportedType => NotificationType.Slack;
 
     public void ProcessNotifications(Notification model)
     {
